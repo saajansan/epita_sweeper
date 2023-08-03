@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Scanning process completed</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="scan-wrapper">
+        <h1>Scan Results</h1>
+    <div class="scan-holder">
+
+        {% for key in result_messages %}
+            <h2>{{ key }}</h2>
+            <ul>
+                {% if result_messages[key]["move_to_quarantine"]: %}
+                    <li class="failed">Files are scanned and malicious codes are found so now moved to <strong>Quarantine</strong>.</li>
+                {%else%}
+                    <li class="success">Files are scanned it is <strong>Cleaned</strong>. No malicious codes are found.</li>
+                {%endif%}
+                <!-- {% for key, value in result_messages[key].items() %}
+                    {% set className = "failed" if key == "move_to_quarantine" else "success" %}
+                    <li class="{{ className }}">{{ key }}: {{ value }}</li>
+                {% endfor %} -->
+            </ul>
+        {% endfor %}
+</div>
+<div class="center"><a class="btn btn--form" href="/all-files">Back</a></div>
+    </div>
+    
+</body>
+</html>

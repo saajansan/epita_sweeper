@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload PDF File</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function validateForm() {
+            var fileInput = document.getElementById("pdf_file");
+            var file = fileInput.files[0];
+            
+            // Validate file extension
+            if (!file.name.endsWith('.pdf')) {
+                document.getElementById("error-message").innerHTML = "Invalid file format. Please upload a PDF file.";
+                return false;
+            }
+
+            // Validate file size
+            var maxSize = 5 * 1024 * 1024;  // 5 MB
+            if (file.size > maxSize) {
+                document.getElementById("error-message").innerHTML = "File size exceeds the limit. Please upload a file up to 5 MB.";
+                return false;
+            }
+
+            // All validations passed
+            return true;
+        }
+    </script>
+</head>
+<body>
+  <div class="upload-holder">
+    <div class="upload">
+      <h1>Upload PDF File</h1>
+    <form method="POST" enctype="multipart/form-data" onsubmit="return validateForm()" action="{{ url_for('upload') }}">
+        <input type="file" name="pdf_file" id="pdf_file">
+        <br>
+        <span class="file-size">Upload 5MB Max file size.</span>
+        <span id="error-message">{{ error }}</span>
+        <br>
+        <input class="new-user"  type="submit" value="Upload">
+    </form>
+    </div>
+  </div>
+  <div class="center"><a class="btn btn--form" href="/all-files">Back</a></div>
+  </div>
+</body>
+</html>

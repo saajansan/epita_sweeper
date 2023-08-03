@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: linear-gradient(to right bottom, #011a3c, #003886);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  width: 400px;
+  margin: 30px auto 0;
+  padding: 30px 48px 30px 48px;
+  background-color: #f2efee;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+.upload-holder{
+width: 400px;
+  margin:100px auto 30px; 
+  padding: 30px 48px 30px 48px;
+  background-color: #f2efee;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+.login-title {
+  padding: 0 15px 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 8px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 9px;
+  background-color:rgb(232, 240, 254);
+  border: 3px solid #ffffff;
+}
+
+.login-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+}
+
+.btn--form {
+  background-color: #B70D7F;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 15px;
+  margin:20px 0;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 9px;
+  border: none;
+
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+button {
+  outline: 1px solid #f48982;
+}
+
+.btn--form:hover {
+  background-color: #EF4CBA;
+  color: #fff;
+}
+.new-user {
+  background: #102b65;
+  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border:3px solid #102b65;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.new-user:hover {
+  background: #264076;
+}
+.circle{
+  border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    background: #F8FAF5;
+    margin: 0 auto;
+}
+
+i {
+  color: #9ABC66;
+  font-size: 100px;
+  line-height: 200px;
+  margin-left: -15px;
+}
+.login-holder{
+  text-align: center;
+}
+.login-form label span{
+  font-style: italic;
+  color: #adaba9;
+  font-size: 12px;
+}
+.screen-view{
+  padding: 15px;
+    border: 10px solid #fff;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    overflow-y: auto;
+}
+.screen-view ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.screen-view ul li{
+  margin-bottom: 10px;
+}
+.check{
+  display: flex;
+  margin-bottom: 10px;
+}
+.screen-view ul li input[type="checkbox"]{
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+}
+
+.screen-view ul li a, .screen-view ul li label{
+  color: #B70D7F;
+  line-height: 25px;
+  display: flex;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.screen-view ul li strong{
+  display: inline-block;
+  margin-right: 10px;
+}
+.upload{
+  text-align: center;
+}
+.upload input[type="file"]{
+  border: 3px dotted #CCB;
+    padding: 20px;
+    margin: 20px;
+}
+#error-message{
+  color: red;
+  display: block;
+  margin-bottom: 10px;
+}
+.file-size{
+  color: red;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.scan-wrapper{
+  width: 1000px;
+  max-width: 100%;
+  margin: 30px auto;
+}
+.scan-wrapper h1{
+  font-size: 36px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+}
+.scan-holder{
+  width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+}
+.scan-holder ul{
+  margin: 0 0 15px;
+}
+
+.scan-holder ul li{
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  list-style: none;
+  line-height: 30px;
+  background: url(./images/yes.png) no-repeat;
+  background-size: 30px 30px;
+}
+.scan-holder ul li.failed{
+  margin: 0;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  list-style: none;
+  background: url(./images/quarantine.png) no-repeat;
+  background-size: 30px 30px;
+}
+.scan-holder h2{
+  color: #003886;
+  line-height: 30px;
+  line-height: 40px;
+}
+.logo{
+  text-align: center;
+  margin-top: 40px;
+}
+.logo p{
+color: #fff;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 25px;
+}
+.center{
+  text-align: center;
+}
+.failed strong{
+  color: #f00;
+}
+.success strong{
+  color: #0f0;
+}
